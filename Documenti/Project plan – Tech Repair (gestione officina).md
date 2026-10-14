@@ -99,8 +99,8 @@ Tutte le decisioni operative e architetturali vengono prese per consenso all'int
 
 **Interfacce esterne**
 
-* Docenti di riferimento: Il Prof. Gargantini e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite issue tramite GitHub
-* #### Project Plan: Il project plan deve essere formalmente approvato tramite un'issue assegnata al professore, completando l'iter almeno un mese prima della data d'esame prevista
+* Docenti di riferimento: Il Prof. Gargantini e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite GitHub
+* #### Project Plan: Il project plan deve essere formalmente approvato dal professore almeno un mese prima della data d'esame prevista
 
 
 
@@ -108,7 +108,7 @@ Tutte le decisioni operative e architetturali vengono prese per consenso all'int
 
 **Comunicazione**
 
-* GitHub (Issue e Pull Request): Canale ufficiale ed esclusivo per il tracciamento delle decisioni, l'inoltro delle richieste di modifica al codice o ai modelli, e lo svolgimento delle attività di code review
+* GitHub: Canale ufficiale ed esclusivo per il tracciamento delle decisioni, l'inoltro delle richieste di modifica al codice o ai modelli, e lo svolgimento delle attività di code review
 * Riunione settimanale: Incontro periodico del team finalizzato all'allineamento sullo stato di avanzamento delle attività (stato dei task sulla lavagna Kanban) e alla pianificazione degli obiettivi futuri
 * Chat di gruppo: Utilizzata unicamente per comunicazioni rapide, urgenze operative o scambi informativi interni. Questo canale non ha alcuna validità decisionale ai fini dello sviluppo del progetto
 
@@ -136,7 +136,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 * Branch 'main' stabile: Il ramo main rappresenta il codice di produzione stabile. Nessuna modifica viene effettuata direttamente su di esso
 * Apertura dei Branch: Ogni attività parte da un Issue. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita
-* Commit piccoli e frequenti: Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata.  Sono vietati messaggi generici
+* Commit piccoli e frequenti: Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici
 * Una pull request per ogni branch: Ogni branch richiede l'apertura di una Pull Request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
 * Gestione file StarUML (.mdj): Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta
 
@@ -184,9 +184,9 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 
 **Obiettivi in ordine di priorità**
 
-1. Requisiti e mRequisiti e modelli UML: Sviluppo di modelli completi, coerenti e non banali (assorbono circa il 70% del monte ore totale)
+1. Requisiti e modelli UML: Sviluppo di modelli completi, coerenti e non banali (assorbono circa il 70% del monte ore totale)
 2. Implementazione software: Sviluppo funzionante dei flussi principali dell'applicazione Tech Repair
-3. Utilizzo effettivo di GitHub: Applicazione rigorosa del flusso di lavoro tramite issue, branch dedicati, pull request e attività di code review
+3. Utilizzo effettivo di GitHub: Applicazione rigorosa del flusso di lavoro tramite milestone, issue, branch, pull request e attività di code review
 4. Qualità del codice: Scrittura di test JUnit, misurazione della code coverage e monitoraggio delle metriche del codice
 
 
@@ -195,29 +195,34 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 
 * Impegno orario: Ogni membro del team dedica circa 4 ore a settimana per 9 settimane (dal 12 ottobre al 13 dicembre 2026), per un totale stimato di 36 ore pro capite, rispettando la forchetta di 30-40 ore indicata dal corso
 * Standardizzazione: Tutti i componenti del team utilizzano i medesimi strumenti di sviluppo e la stessa struttura concordata per il repository
-* Perimetro di progetto: Si assume che il docente approvi il Project Plan senza richiedere modifiche al perimetro applicativo
 * Fattori esterni (Dipendenze): La pianificazione temporale è strettamente subordinata alla data di approvazione del Project Plan, alla calendarizzazione della presentazione orale e alle sessioni d'esame degli altri insegnamenti universitari
 
 
 
 **Monitoraggio e reporting (GitHub Projects)**
 
-* Project board GitHub (vista Board) con colonne Backlog, Ready, In Progress, In Review, Done e campi Iteration (sprint), Work package (WP1-WP7), Ore stimate e Assegnatario
-* Struttura della Board (Vista Kanban):
+* Bacheca Kanban:
 
-  * Backlog: Raccolta iniziale di tutti gli issue e delle idee
-  * Ready: Task rifiniti e pronti per essere presi in carico dal team
-  * In Progress: Attività attualmente in fase di sviluppo
-  * In Review: Codice o modelli sotto revisione tramite Pull Request
-  * Done: Task completati e validati
+  * ToDo board: Vista operativa principale organizzata che mappa visivamente i task dall'ideazione fino alla chiusura
+
+    * Backlog: Raccolta iniziale di tutti gli issue e delle idee
+    * Ready: Task rifiniti e pronti per essere presi in carico dal team
+    * In Progress: Attività attualmente in fase di sviluppo
+    * In Review: Codice o modelli sotto revisione tramite Pull Request
+    * Done: Task completati e validati
+  * Team items: Panoramica globale che mostra tutti gli issue del progetto, i rispettivi assegnatari e la suddivisione del lavoro organizzata per ciascuna milestone
+  * My items: Vista personalizzata filtrata esclusivamente sugli issue assegnati al singolo utente, raggruppati in base alla milestone di riferimento
+  * Roadmap: Visualizzazione cronologica che ordina e traccia nel tempo la pianificazione di tutti gli issue lungo una linea temporale
+* Registro ore: Registro contenente le ore di lavoro suddiviso in milestone e assegnatari
+
+  * Ore stimate: Ore stimate per il completamento dell'issue
+  * Ore effettive: Ore impiegate per il completamento dell'issue
 
 
 
-**Rituali di controllo e gestione delle ore**
+**Rituali di controllo**
 
 * Allineamento settimanale: Riunione periodica volta a verificare lo stato di avanzamento dei task e a ridistribuire le attività in caso di colli di bottiglia
-* A fine sprint, un'issue di riepilogo con cosa è stato fatto, le ore spese e le differenze rispetto al piano
-* Registro ore condiviso, per tenere sotto controllo il carico di ciascuno
 
 ## 
 

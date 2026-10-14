@@ -99,7 +99,7 @@ Tutte le decisioni operative e architetturali vengono prese per consenso all'int
 
 **Interfacce esterne**
 
-* Docenti di riferimento: Il Prof. Garganti e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite issue tramite GitHub
+* Docenti di riferimento: Il Prof. Gargantini e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite issue tramite GitHub
 * #### Project Plan: Il project plan deve essere formalmente approvato tramite un'issue assegnata al professore, completando l'iter almeno un mese prima della data d'esame prevista
 
 
@@ -122,7 +122,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 **Repository e cartelle**
 
-* Proprietà del Repository: Creato dall'account AleBenUni e condiviso con i professori Garganti e Bonfanti. La root del repository prende il nome del software (Tech Repair) e non deve contenere file di configurazione dell'IDE (es. .project)
+* Proprietà del Repository: Creato dall'account AleBenUni e condiviso con i professori Gargantini e Bonfanti. La root del repository prende il nome del software (Tech Repair) e non deve contenere file di configurazione dell'IDE (es. .project)
 * Struttura delle cartelle:
 
   * documenti/: Contiene la documentazione ufficiale e il file di progetto StarUML
@@ -210,9 +210,12 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
   * In Progress: Attività attualmente in fase di sviluppo
   * In Review: Codice o modelli sotto revisione tramite Pull Request
   * Done: Task completati e validati
-* Workflow integrati della board: elemento aggiunto → Todo; issue o pull request chiusa o unita → Done; lo spostamento in In review è manuale all'apertura della pull request
-* Vista Tabella raggruppata per assegnatario, per controllare il carico di ciascuno
-* Riunione settimanale per verificare l'avanzamento e riallocare il lavoro
+
+
+
+**Rituali di controllo e gestione delle ore**
+
+* Allineamento settimanale: Riunione periodica volta a verificare lo stato di avanzamento dei task e a ridistribuire le attività in caso di colli di bottiglia
 * A fine sprint, un'issue di riepilogo con cosa è stato fatto, le ore spese e le differenze rispetto al piano
 * Registro ore condiviso, per tenere sotto controllo il carico di ciascuno
 
@@ -241,10 +244,10 @@ Quattro persone con ruoli di responsabilità distinti, ma tutte coinvolte in mod
 
 |Ruolo|Responsabilità principali|Membro|
 |-|-|-|
-|Project manager e configuration manager|Pianificazione, board, issue, release, ordine del repository, registro ore|Membro A|
-|Analista dei requisiti|Specifica dei requisiti, use case, scenari ed eccezioni|Membro B|
-|Architetto|Architettura, class, component e package diagram, design pattern|Membro C|
-|Responsabile sviluppo e test|Implementazione, test JUnit, copertura, metriche|Membro D|
+|Project manager e configuration manager|Pianificazione, board, issue, release, ordine del repository, registro ore|Matteo Testa|
+|Analista dei requisiti|Specifica dei requisiti, use case, scenari ed eccezioni|Alice Rota|
+|Architetto|Architettura, class, component e package diagram, design pattern|Mattia Maggioni|
+|Responsabile sviluppo e test|Implementazione, test JUnit, copertura, metriche|Alessandro Benigni|
 
 I ruoli indicano chi risponde di un'area, non chi la svolge da solo: ogni diagramma e ogni classe passano per la review di almeno un'altra persona.
 
@@ -368,7 +371,7 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 
 **Come.**
 
-* Tutto committato nel repository condiviso con garganti e silviabonfanti, con .gitignore corretto e file .project presenti
+* Tutto committato nel repository condiviso con gargantini e silviabonfanti, con .gitignore corretto e file .project presenti
 * Prima della consegna, prova su un clone pulito: build Maven e test devono passare da zero
 * Dopo la consegna correggiamo errori e completiamo la documentazione, senza creare nuovi documenti né nuovi progetti Java
 

@@ -364,21 +364,20 @@ Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da 
 
 ## 14\. Delivery
 
-Consegniamo un repository GitHub completo e funzionante, con tutta la documentazione, entro l'8 gennaio 2027 e almeno cinque giorni prima della presentazione.
+Consegniamo un repository GitHub completo e funzionante, con tutta la documentazione, almeno cinque giorni prima della presentazione.
 
 **Cosa consegniamo.**
 
 * Project plan, approvato dal professore almeno un mese prima dell'esame
-* Relazione finale in sei documenti: project plan, gestione del progetto, requisiti, design, testing, maintenance
+* Relazione finale in un unico PDF diviso in capitoli: project plan, gestione del progetto, requisiti, design, testing, maintenance
 * Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli
 * File StarUML con tutti i diagrammi
-* Presentazione basata sul template del corso
 
 **Come.**
 
-* Tutto committato nel repository condiviso con gargantini e silviabonfanti, con .gitignore corretto e file .project presenti
-* Prima della consegna, prova su un clone pulito: build Maven e test devono passare da zero
-* Dopo la consegna correggiamo errori e completiamo la documentazione, senza creare nuovi documenti né nuovi progetti Java
+* Tutto committato nel repository condiviso con garganti e silviabonfanti
+* Prima della consegna, prova su un clone pulito: build Maven e test devono passare da zero ................
+* Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java
 
 **Presentazione.** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.
 

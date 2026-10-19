@@ -20,7 +20,9 @@ Tech Repair gestisce il percorso di un dispositivo in riparazione, dall'accettaz
 
 Pianificare come sviluppiamo il sistema: Processo, organizzazione, rischi, risorse e calendario. Il piano è condiviso con il professore e l'esercitatrice tramite issue GitHub per l'approvazione.
 
-**Attori.** Il sistema ha tre attori: Il Cliente, il Tecnico Riparatore e il Responsabile Magazzino.
+**Attori**
+
+Il sistema ha tre attori: Il Cliente, il Tecnico Riparatore e il Responsabile Magazzino.
 
 **Funzionalità principali**
 
@@ -37,13 +39,15 @@ Se il cliente rifiuta il preventivo, la scheda passa ad "Annullato" e si addebit
 
 Rientra tutto il flusso sopra, con dati persistiti in un database embedded e interfaccia solo a riga di comando (console), senza interfaccia grafica. Restano fuori pagamenti reali, invio reale di email o SMS (le notifiche sono simulate) e contabilità.
 
-**Riferimenti.** Requisiti per il progetto di ingegneria del software AA 2026/27 (Gargantini, Bonfanti); materiale del corso, incluso il capitolo 2 del libro.
+**Riferimenti**
+
+Requisiti per il progetto di ingegneria del software AA 2026/27 (Gargantini, Bonfanti); materiale del corso, incluso il capitolo 2 del libro.
 
 ## 
 
 ## 2. Process model
 
-Seguiamo un processo iterativo e incrementale a sprint di due settimane (lo sprint 0 dura una settimana), in cui requisiti e modelli vengono raffinati a ogni iterazione; il progetto è quasi completo il 13 dicembre 2026.
+Seguiamo un processo iterativo e incrementale ispirato a Scrum, organizzato in time box (sprint) di due settimane (lo sprint 0 dura una settimana) associati a milestone GitHub, in cui requisiti e modelli vengono raffinati a ogni iterazione; il progetto è quasi completo il 13 dicembre 2026.
 
 **Perché questo processo**
 
@@ -55,7 +59,7 @@ Il team è piccolo e ha poche ore a testa, quindi servono iterazioni brevi e ver
 2. **Sviluppo e revisione:** Lavoro su branch dedicati, con pull request e code review.
 3. **Chiusura:** Verifica dei criteri di accettazione e retrospettiva breve.
 
-**Obiettivi per sprint** (date e ore nella sezione 12).
+**Obiettivi per sprint** (date e ore nella sezione 12)
 
 * **Sprint 0** (12-18 ottobre, 16 ore di team): Setup del repository, Project Plan, avvio dei requisiti.
 * **Sprint 1** (19 ottobre-1 novembre, 32 ore): Specifica dei requisiti, use case diagram, class diagram.
@@ -63,6 +67,7 @@ Il team è piccolo e ha poche ore a testa, quindi servono iterazioni brevi e ver
 * **Sprint 3** (16-29 novembre, 32 ore): Architettura (component e package diagram), design pattern, implementazione del nucleo.
 * **Sprint 4** (30 novembre-13 dicembre, 32 ore): Implementazione completa, test JUnit, copertura e metriche, refactoring e documenti finali; il progetto è quasi pronto il 13 dicembre.
 * **Sprint 5** (14 dicembre-8 gennaio, nessuna ora aggiuntiva oltre al completamento del WP7): Margine per correzioni, revisione incrociata, prova su clone pulito e consegna entro l'8 gennaio.
+* **Percorso critico:** Specifica dei requisiti (sprint 0-1) → Class diagram stabile (sprint 1-2) → Generazione del codice da StarUML (fine sprint 2) → Implementazione del nucleo e test (sprint 3-4).
 
 Le differenze tra questo piano e il processo realmente seguito saranno riportate nel Documento 2 (Gestione del progetto).
 
@@ -70,15 +75,15 @@ Le differenze tra questo piano e il processo realmente seguito saranno riportate
 
 ## 3. Organization of the project
 
-Il team è composto da quattro persone, ciascuna con un'area di responsabilità specifica, operando in una struttura collaborativa senza una gerarchia rigida.
+Il team è composto da quattro persone, ciascuna con un'area di responsabilità specifica, operando come una squadra agile senza una gerarchia rigida e coordinandosi per adattamento reciproco (adhocracy di Mintzberg).
 
 **Struttura interna**
 
-Tutte le decisioni operative e architetturali vengono prese per consenso all'interno del team. Nel caso in cui non si raggiunga un accordo entro la riunione settimanale, la decisione finale spetta al Project Manager. Quest'ultimo ha l'obbligo di motivare formalmente la scelta intrapresa tramite un commento dedicato all'interno dell'issue di riferimento.
+Secondo uno stile di gestione orientato alla relazione e all'integrazione (Reddin), tutte le decisioni operative e architetturali vengono prese per consenso all'interno del team. Nel caso in cui non si raggiunga un accordo entro la riunione settimanale, la decisione finale spetta al Project Manager. Quest'ultimo ha l'obbligo di motivare formalmente la scelta intrapresa tramite un commento dedicato all'interno dell'issue di riferimento.
 
 **Interfacce esterne**
 
-* **Docenti di riferimento:** Il Prof. Gargantini e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite GitHub.
+* **Docenti di riferimento:** Il Prof. Gargantini (`garganti`) e la Prof.ssa Bonfanti (`silviabonfanti`) dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite GitHub.
 * **Project Plan:** Il Project Plan deve essere formalmente approvato dal professore almeno un mese prima della data d'esame prevista.
 
 **Comunicazione**
@@ -95,7 +100,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 **Repository e cartelle**
 
-* **Proprietà del repository:** Creato dall'account AleBenUni e condiviso con i professori Gargantini e Bonfanti. La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
+* **Proprietà del repository:** Creato dall'account `AleBenUni` e condiviso con i professori Gargantini (`garganti`) e Bonfanti (`silviabonfanti`). La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
 * **Struttura delle cartelle:**
   * **`Documenti/`:** Contiene la documentazione ufficiale e il file di progetto StarUML.
   * **`Codice/`:** Contiene i progetti Eclipse.
@@ -104,8 +109,8 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 **Procedura Git e Kanban**
 
-* **Branch `main` stabile:** Il ramo `main` rappresenta il codice di produzione stabile. Nessuna modifica viene effettuata direttamente su di esso.
-* **Apertura dei branch:** Ogni attività parte da un'issue. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita.
+* **Branch `main` stabile (baseline):** Il ramo `main` rappresenta la linea di base (baseline) degli elementi di configurazione approvati (codice, modelli e documenti). Nessuna modifica viene effettuata direttamente su di esso.
+* **Apertura dei branch:** Ogni attività parte da un'issue classificata tramite label, milestone e assegnatario. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita.
 * **Commit piccoli e frequenti:** Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici.
 * **Una pull request per ogni branch:** Ogni branch richiede l'apertura di una pull request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
 * <mark>**Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.</mark>
@@ -122,10 +127,10 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 **Codice**
 
-* **Tecnologie:** Linguaggio Java (adottando le convenzioni standard) e progetti gestiti tramite Maven con la suite di test posizionata in `src/test/java`.
+* **Tecnologie:** Linguaggio Java (adottando le convenzioni standard) e progetti gestiti tramite Maven con il codice sorgente posizionato in `src/main/java` e la suite di test in `src/test/java`.
 * **Portabilità:** Divieto assoluto di inserire percorsi (path) assoluti. Il database deve essere di tipo embedded e l'applicazione non deve dipendere da servizi esterni da installare localmente.
 * **Architettura del codice:** Package coesi e privi di cicli di dipendenza. Rispetto del principio dell'information hiding tramite l'uso appropriato dei modificatori `private` e `public`. Uso sistematico di interfacce, classi astratte e dell'annotazione `@Override` dove necessario.
-* **Tracciamento:** Logging dell'applicazione gestito tramite Log4j, con la relativa dipendenza configurata nel `pom.xml` di Maven.
+* **Tracciamento:** Logging dell'applicazione gestito tramite Log4j (al posto di stampe con `System.out.println`), con le relative dipendenze (`log4j-api` e `log4j-core`) configurate nel `pom.xml` di Maven.
 
 **Modelli e documenti**
 
@@ -140,9 +145,9 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 
 **Obiettivi in ordine di priorità**
 
-1. **Requisiti e modelli UML:** Sviluppo di modelli completi, coerenti e non banali (assorbono circa il 70% del monte ore totale).
+1. **Requisiti, modelli UML e progettazione:** Sviluppo di modelli e design completi, coerenti e non banali (che insieme alla gestione assorbono circa il 70% del monte ore totale).
 2. **Implementazione software:** Sviluppo funzionante dei flussi principali dell'applicazione Tech Repair.
-3. **Utilizzo effettivo di GitHub:** Applicazione rigorosa del flusso di lavoro tramite milestone, issue, branch, pull request e attività di code review.
+3. **Utilizzo effettivo di GitHub:** Applicazione rigorosa del flusso di lavoro tramite milestone, issue con label, branch, pull request e attività di code review.
 4. **Qualità del codice:** Scrittura di test JUnit, misurazione della code coverage e monitoraggio delle metriche del codice.
 
 **Assunzioni**
@@ -153,7 +158,7 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 
 **Monitoraggio e reporting (GitHub Projects)**
 
-* **Bacheca Kanban:**
+* **Bacheca Kanban (condivisa con il team e con i docenti):**
   * **ToDo board:** Vista operativa principale organizzata che mappa visivamente i task dall'ideazione fino alla chiusura.
     * **Backlog:** Raccolta iniziale di tutte le issue e delle idee.
     * **Ready:** Task rifiniti e pronti per essere presi in carico dal team.
@@ -212,7 +217,7 @@ Ogni membro deve dare un contributo significativo. A fine progetto ciascuno valu
 Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comune tra requisiti, design e codice.
 
 * **Requisiti:** Analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, definizione degli attributi di qualità del software (Software Quality), use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento `alt` del sequence diagram e almeno un test JUnit, con tracciabilità tra il Documento 3 (Requisiti) e il Documento 5 (Testing).
-* **Modellazione:** UML con StarUML 5: Use case, class, state machine, sequence, communication o timing, activity, component e package diagram.
+* **Modellazione:** Diagrammi UML realizzati con StarUML 5 (use case, class, state machine, sequence, communication o timing, activity, component e package diagram).
 * **Generazione del codice:** Prima versione delle classi Java generata una sola volta dal class diagram con StarUML secondo un approccio MDA (Model-Driven Architecture) parziale, a modello stabile (fine sprint 2), per non sovrascrivere codice scritto a mano; poi completata a mano, compresi tutti i corpi dei metodi. La generazione ha un commit dedicato e il Documento 4 (Design) riporta l'elenco delle classi generate, con package e modifiche manuali successive.
 * **Design:** Almeno due design pattern visti a lezione; candidati: State per la scheda di riparazione, Observer per le notifiche al cliente, Strategy per il calcolo dei costi.
 * **Implementazione:** Java moderno, Maven, Log4j, database embedded, interfaccia solo a riga di comando (console).
@@ -284,13 +289,15 @@ Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 o
 
 Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da una pull request, così resta tracciata.
 
-**Richieste di modifica:**
+**Richieste di modifica**
 
 1. Chi propone apre un'issue con motivo, impatto su requisiti, modelli, codice e ore.
 2. Il Project Manager, sentito il team, valuta la richiesta.
 3. La modifica approvata viene implementata tramite un branch e rivista con pull request.
 
-**Versioning dei documenti:** Il Project Plan ha una tabella delle versioni in testa: Ogni revisione aggiunge una riga con data e modifiche. I documenti nel repository sono versionati con Git, quindi la cronologia dei commit fa da storico.
+**Versioning dei documenti**
+
+Il Project Plan ha una tabella delle versioni in testa: Ogni revisione aggiunge una riga con data e modifiche. I documenti nel repository sono versionati con Git, quindi la cronologia dei commit fa da storico.
 
 ## 
 
@@ -298,17 +305,19 @@ Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da 
 
 Consegniamo un repository GitHub completo e funzionante, con tutta la documentazione, almeno cinque giorni prima della presentazione.
 
-**Cosa consegniamo:**
+**Cosa consegniamo**
 
 * Project Plan, approvato dal professore almeno un mese prima dell'esame.
 * **Relazione finale in un unico PDF diviso in capitoli:** Documento 1 (Project Plan), Documento 2 (Gestione del progetto), Documento 3 (Requisiti), Documento 4 (Design), Documento 5 (Testing), Documento 6 (Maintenance).
 * Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli.
 * File StarUML con tutti i diagrammi.
 
-**Come:**
+**Come**
 
 * Tutto committato nel repository condiviso con Gargantini e Bonfanti.
 * **Prima della consegna, prova su un clone pulito:** <mark>Build Maven e test devono passare da zero. </mark>
 * Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
 
-**Presentazione:** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.
+**Presentazione**
+
+Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.

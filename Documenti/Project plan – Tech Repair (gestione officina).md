@@ -1,6 +1,6 @@
-# Project plan – Tech Repair (gestione officina)
+# Project Plan – Tech Repair (gestione officina)
 
-Tech Repair è il sistema che il nostro team di quattro persone sviluppa per il corso di Ingegneria del software (AA 2026/27); questo project plan ne fissa processo, ruoli, rischi e calendario.
+Tech Repair è il sistema che il nostro team di quattro persone sviluppa per il corso di Ingegneria del software (AA 2026/27); questo Project Plan ne fissa processo, ruoli, rischi e calendario.
 
 ## Versioni
 
@@ -52,17 +52,17 @@ Il team è piccolo e ha poche ore a testa, quindi servono iterazioni brevi e ver
 **Ciclo di ogni sprint**
 
 1. **Pianificazione:** Scegliamo le issue dello sprint e le assegniamo sulla board GitHub.
-2. Lavoro su branch dedicati, con pull request e code review.
+2. **Sviluppo e revisione:** Lavoro su branch dedicati, con pull request e code review.
 3. **Chiusura:** Verifica dei criteri di accettazione e retrospettiva breve.
 
 **Obiettivi per sprint** (date e ore nella sezione 12).
 
-* **Sprint 0** (12-18 ott, 16 ore di team): Setup del repository, project plan, avvio dei requisiti.
-* **Sprint 1** (19 ott-1 nov, 32 ore): Specifica dei requisiti, use case diagram, class diagram.
-* **Sprint 2** (2-15 nov, 32 ore): State machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML secondo un approccio MDA (Model-Driven Architecture), prime viste architetturali.
-* **Sprint 3** (16-29 nov, 32 ore): Architettura (component e package diagram), design pattern, implementazione del nucleo.
-* **Sprint 4** (30 nov-13 dic, 32 ore): Implementazione completa, test JUnit, copertura e metriche, refactoring e documenti finali; il progetto è quasi pronto il 13 dicembre.
-* **Sprint 5** (14 dic-8 gen, nessuna ora aggiuntiva oltre al completamento del WP7): Margine per correzioni, revisione incrociata, prova su clone pulito e consegna entro l'8 gennaio.
+* **Sprint 0** (12-18 ottobre, 16 ore di team): Setup del repository, Project Plan, avvio dei requisiti.
+* **Sprint 1** (19 ottobre-1 novembre, 32 ore): Specifica dei requisiti, use case diagram, class diagram.
+* **Sprint 2** (2-15 novembre, 32 ore): State machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML secondo un approccio MDA (Model-Driven Architecture), prime viste architetturali.
+* **Sprint 3** (16-29 novembre, 32 ore): Architettura (component e package diagram), design pattern, implementazione del nucleo.
+* **Sprint 4** (30 novembre-13 dicembre, 32 ore): Implementazione completa, test JUnit, copertura e metriche, refactoring e documenti finali; il progetto è quasi pronto il 13 dicembre.
+* **Sprint 5** (14 dicembre-8 gennaio, nessuna ora aggiuntiva oltre al completamento del WP7): Margine per correzioni, revisione incrociata, prova su clone pulito e consegna entro l'8 gennaio.
 
 Le differenze tra questo piano e il processo realmente seguito saranno riportate nel Documento 2 (Gestione del progetto).
 
@@ -79,7 +79,7 @@ Tutte le decisioni operative e architetturali vengono prese per consenso all'int
 **Interfacce esterne**
 
 * **Docenti di riferimento:** Il Prof. Gargantini e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite GitHub.
-* **Project Plan:** Il project plan deve essere formalmente approvato dal professore almeno un mese prima della data d'esame prevista.
+* **Project Plan:** Il Project Plan deve essere formalmente approvato dal professore almeno un mese prima della data d'esame prevista.
 
 **Comunicazione**
 
@@ -95,17 +95,17 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 **Repository e cartelle**
 
-* **Proprietà del Repository:** Creato dall'account AleBenUni e condiviso con i professori Gargantini e Bonfanti. La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
+* **Proprietà del repository:** Creato dall'account AleBenUni e condiviso con i professori Gargantini e Bonfanti. La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
 * **Struttura delle cartelle:**
   * **`Documenti/`:** Contiene la documentazione ufficiale e il file di progetto StarUML.
   * **`Codice/`:** Contiene i progetti Eclipse.
 * **Nomenclatura progetti Eclipse:** Devono tassativamente iniziare con la sigla `TR_` (es. `TR_core`, `TR_console`, `TR_database`). Sono vietati nomi generici.
-* **Gestione Gitignore:** Il file `.gitignore` deve escludere i file `.class` e la cartella `target/`. I file `.project`, `.classpath` e `pom.xml` devono essere sempre committati per garantire l'allineamento dell'ambiente di sviluppo.
+* **Gestione `.gitignore`:** Il file `.gitignore` deve escludere i file `.class` e la cartella `target/`. I file `.project`, `.classpath` e `pom.xml` devono essere sempre committati per garantire l'allineamento dell'ambiente di sviluppo.
 
 **Procedura Git e Kanban**
 
 * **Branch `main` stabile:** Il ramo `main` rappresenta il codice di produzione stabile. Nessuna modifica viene effettuata direttamente su di esso.
-* **Apertura dei Branch:** Ogni attività parte da un'issue. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita.
+* **Apertura dei branch:** Ogni attività parte da un'issue. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita.
 * **Commit piccoli e frequenti:** Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici.
 * **Una pull request per ogni branch:** Ogni branch richiede l'apertura di una pull request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
 * #### **Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.
@@ -117,7 +117,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 * **Nessun push diretto su `main`:** Ogni modifica passa da una pull request.
 * **Approvazione mirata:** Per poter effettuare il merge, serve l'approvazione del Project Manager. In caso di sua indisponibilità, l'approvazione può essere concessa da un membro del team diverso dall'autore, scelto in base alla competenza specifica del task.
-* **Strategia di Merge:** Il merge viene eseguito solo dopo aver ottenuto l'approvazione. Si utilizza il merge normale (Create a merge commit) e non lo squash, per mantenere intatta la cronologia dei singoli commit nella storia del progetto.
+* **Strategia di merge:** Il merge viene eseguito solo dopo aver ottenuto l'approvazione. Si utilizza il merge normale (Create a merge commit) e non lo squash, per mantenere intatta la cronologia dei singoli commit nella storia del progetto.
 * **Statistiche finali:** A fine progetto, il Documento 2 (Gestione del progetto) riporterà i dati analitici su commit, PR aperte e review effettuate per ciascun componente del team.
 
 **Codice**
@@ -180,7 +180,7 @@ I rischi più pesanti sono la sottostima del tempo di modellazione e la distribu
 |Rischio|Probabilità|Impatto|Mitigazione|Responsabile|
 |-|-|-|-|-|
 |Sottostima del tempo di modellazione|Alta|Alto|Buffer nello sprint 2, review dei diagrammi a metà sprint|Architetto|
-|Diagrammi UML troppo semplici|Media|Alto|Checklist degli elementi visti a lezione per state machine, sequence e activity; review incrociata|Analista dei requisiti|
+|Diagrammi UML troppo semplici|Media|Alto|Checklist degli elementi visti a lezione per state machine, sequence e activity; review incrociata|Architetto|
 |Carico di lavoro non uniforme tra i membri|Media|Alto|Issue assegnate esplicitamente, registro ore, controllo settimanale|Project Manager|
 |Implementazione frammentaria|Media|Alto|Perimetro ridotto, priorità ai flussi principali, test sui flussi|Responsabile sviluppo e test|
 |Sovrapposizione con gli esami di altri corsi|Alta|Medio|Calendario condiviso, sprint più leggeri nelle settimane d'esame, margine dello sprint 5 (14 dicembre-8 gennaio)|Project Manager|
@@ -198,7 +198,7 @@ Quattro persone con ruoli di responsabilità distinti, ma tutte coinvolte in mod
 |-|-|-|
 |Project Manager e configuration manager|Pianificazione, board, issue, release, ordine del repository, registro ore|Matteo Testa|
 |Analista dei requisiti|Specifica dei requisiti, use case, scenari ed eccezioni|Alice Rota|
-|Architetto|Architettura, class, component e package diagram, design pattern|Mattia Maggioni|
+|Architetto|Architettura, modellazione UML (class, state machine, sequence, communication o timing, activity, component e package diagram), design pattern|Mattia Maggioni|
 |Responsabile sviluppo e test|Implementazione, test JUnit, copertura, metriche|Alessandro Benigni|
 
 I ruoli indicano chi risponde di un'area, non chi la svolge da solo: Ogni diagramma e ogni classe passano per la review di almeno un'altra persona.
@@ -211,7 +211,7 @@ Ogni membro deve dare un contributo significativo. A fine progetto ciascuno valu
 
 Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comune tra requisiti, design e codice.
 
-* **Requisiti:** Analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, definizione degli attributi di qualità del software (Software Quality), use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento alt del sequence diagram e almeno un test JUnit, con tracciabilità tra il Documento 3 (Requisiti) e il Documento 5 (Testing).
+* **Requisiti:** Analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, definizione degli attributi di qualità del software (Software Quality), use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento `alt` del sequence diagram e almeno un test JUnit, con tracciabilità tra il Documento 3 (Requisiti) e il Documento 5 (Testing).
 * **Modellazione:** UML con StarUML 5: Use case, class, state machine, sequence, communication o timing, activity, component e package diagram.
 * **Generazione del codice:** Prima versione delle classi Java generata una sola volta dal class diagram con StarUML secondo un approccio MDA (Model-Driven Architecture) parziale, a modello stabile (fine sprint 2), per non sovrascrivere codice scritto a mano; poi completata a mano, compresi tutti i corpi dei metodi. La generazione ha un commit dedicato e il Documento 4 (Design) riporta l'elenco delle classi generate, con package e modifiche manuali successive.
 * **Design:** Almeno due design pattern visti a lezione; candidati: State per la scheda di riparazione, Observer per le notifiche al cliente, Strategy per il calcolo dei costi.
@@ -245,13 +245,13 @@ La qualità si controlla con revisioni sistematiche, test automatici e metriche,
 
 Il lavoro è diviso in sette work package, ciascuno con ore, sprint e responsabile; la somma delle ore coincide con il budget di 144 ore.
 
-* **WP1 – Gestione e setup** (14 ore, sprint 0 e riepiloghi in ogni sprint; Project Manager). Configurazione del repository, board, project plan, registro ore. Deliverable: Project plan e repository configurato.
-* **WP2 – Requisiti** (22 ore, sprint 0 e 1; Analista dei requisiti). Elicitazione, specifica secondo IEEE 830, definizione degli attributi di Software Quality, use case con scenari ed eccezioni. Deliverable: Documento 3 (Requisiti) e use case diagram.
-* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto). Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. Deliverable: Progetto StarUML con i diagrammi e prime classi Java generate.
-* **WP4 – Architettura e design** (30 ore, sprint 2 e 3; Architetto). Viste architetturali, component e package diagram, stile architetturale, design pattern, libreria esterna Maven. Deliverable: Documento 4 (Design).
-* **WP5 – Implementazione** (24 ore, sprint 3 e 4; Responsabile sviluppo e test). Progetti Eclipse Maven, completamento del codice generato, database embedded, logging, interfaccia a riga di comando. Deliverable: Codice funzionante dei flussi principali.
-* **WP6 – Testing** (10 ore, sprint 4; Responsabile sviluppo e test). Test JUnit, misura di copertura, metriche sul codice. Deliverable: Suite di test e Documento 5 (Testing).
-* **WP7 – Rifinitura e presentazione** (9 ore, sprint 4 e 5; Project Manager). Refactoring documentato nel Documento 6 (Maintenance), documenti finali, README, prova su clone pulito, presentazione. Deliverable: Repository pronto per la consegna e slide.
+* **WP1 – Gestione e setup** (14 ore, sprint 0 e riepiloghi in ogni sprint; Project Manager): Configurazione del repository, board, Project Plan, registro ore. **Deliverable:** Project Plan e repository configurato.
+* **WP2 – Requisiti** (22 ore, sprint 0 e 1; Analista dei requisiti): Elicitazione, specifica secondo IEEE 830, definizione degli attributi di Software Quality, use case con scenari ed eccezioni. **Deliverable:** Documento 3 (Requisiti) e use case diagram.
+* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto): Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. **Deliverable:** Progetto StarUML con i diagrammi e prime classi Java generate.
+* **WP4 – Architettura e design** (30 ore, sprint 2 e 3; Architetto): Viste architetturali, component e package diagram, stile architetturale, design pattern, libreria esterna Maven. **Deliverable:** Documento 4 (Design).
+* **WP5 – Implementazione** (24 ore, sprint 3 e 4; Responsabile sviluppo e test): Progetti Eclipse Maven, completamento del codice generato, database embedded, logging, interfaccia a riga di comando. **Deliverable:** Codice funzionante dei flussi principali.
+* **WP6 – Testing** (10 ore, sprint 4; Responsabile sviluppo e test): Test JUnit, misura di copertura, metriche sul codice. **Deliverable:** Suite di test e Documento 5 (Testing).
+* **WP7 – Rifinitura e presentazione** (9 ore, sprint 4 e 5; Project Manager): Refactoring documentato nel Documento 6 (Maintenance), documenti finali, `README.md`, prova su clone pulito, presentazione. **Deliverable:** Repository pronto per la consegna e slide.
 
 Ogni work package parte dai deliverable del precedente (requisiti, modelli, design, codice, test); gestione e rifinitura accompagnano l'intero progetto.
 
@@ -276,7 +276,7 @@ Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 o
 
 * **Le ore sono una stima iniziale:** Le aggiorniamo a fine sprint con il registro ore. La forchetta di 30-40 ore del corso equivale a 3-4 ore a settimana.
 * **Il calendario proposto copre sei sprint:** I primi cinque (dal 12 ottobre al 13 dicembre 2026) portano il progetto quasi a compimento; lo sprint 5 (14 dicembre-8 gennaio) copre le vacanze natalizie ed è un margine per correzioni, revisione e consegna.
-* La consegna interna è fissata all'8 gennaio 2027. Il progetto completo va consegnato almeno cinque giorni prima della presentazione, quindi la presentazione non può cadere prima del 13 gennaio 2027.
+* **La consegna interna è fissata all'8 gennaio 2027:** Il progetto completo va consegnato almeno cinque giorni prima della presentazione, quindi la presentazione non può cadere prima del 13 gennaio 2027.
 
 ## 
 
@@ -290,7 +290,7 @@ Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da 
 2. Il Project Manager, sentito il team, valuta la richiesta.
 3. La modifica approvata viene implementata tramite un branch e rivista con pull request.
 
-**Versioning dei documenti:** Il project plan ha una tabella delle versioni in testa: Ogni revisione aggiunge una riga con data e modifiche. I documenti nel repository sono versionati con Git, quindi la cronologia dei commit fa da storico.
+**Versioning dei documenti:** Il Project Plan ha una tabella delle versioni in testa: Ogni revisione aggiunge una riga con data e modifiche. I documenti nel repository sono versionati con Git, quindi la cronologia dei commit fa da storico.
 
 ## 
 
@@ -300,7 +300,7 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 
 **Cosa consegniamo:**
 
-* Project plan, approvato dal professore almeno un mese prima dell'esame.
+* Project Plan, approvato dal professore almeno un mese prima dell'esame.
 * Relazione finale in un unico PDF diviso in capitoli: Documento 1 (Project Plan), Documento 2 (Gestione del progetto), Documento 3 (Requisiti), Documento 4 (Design), Documento 5 (Testing), Documento 6 (Maintenance).
 * Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli.
 * File StarUML con tutti i diagrammi.

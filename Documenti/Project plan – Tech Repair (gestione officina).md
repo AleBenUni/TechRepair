@@ -113,7 +113,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 * **Apertura dei branch:** Ogni attività parte da un'issue classificata tramite label, milestone e assegnatario. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita.
 * **Commit piccoli e frequenti:** Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici.
 * **Una pull request per ogni branch:** Ogni branch richiede l'apertura di una pull request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
-* <mark style="background-color: #ffff00; color: #000000;">**Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.</mark>
+* <mark>**Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.</mark>
   * <mark>Chi inizia a lavorarci deve "prenotarlo" con un commento nell'issue dedicata.</mark>
   * <mark>Nessun altro può modificare il modello finché l'issue associata non passa nello stato "In Review".</mark>
   * <mark>È obbligatorio eseguire un `git pull` immediatamente prima di aprire StarUML.</mark>

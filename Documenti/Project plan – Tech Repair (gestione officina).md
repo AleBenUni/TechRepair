@@ -7,8 +7,8 @@ Tech Repair è il sistema che il nostro team di quattro persone sviluppa per il 
 |Versione|Data|Modifiche|
 |-|-|-|
 |1.0.0|12/10/2026|Versione iniziale|
-|1.0.1|13/10/2026|Aggiunti i work package; ore settimanali, sprint e date ricalcolati (progetto quasi pronto il 13 dicembre, consegna entro l'8 gennaio); interfaccia solo console; repository creato da AleBenUni; regole su pull request e review, board GitHub, codice generato e scenari di eccezione|
-|1.0.2|19/10/2026|Uniformati titoli, punteggiatura, formattazione degli elenchi e nomenclatura (cartelle, ruoli, issue e documenti della relazione finale); esplicitati approccio MDA, Software Quality e complessità di McCabe; allineati criteri di accettazione Maven e work package con lo sprint 5|
+|1.0.1|13/10/2026|Aggiunti i work package; ore settimanali, sprint e date ricalcolati (progetto quasi pronto il 13 dicembre, consegna entro l'8 gennaio); interfaccia solo console; repository creato da `AleBenUni`; regole su pull request e review, board GitHub, codice generato e scenari di eccezione|
+|1.0.2|19/10/2026|Uniformati titoli, punteggiatura, formattazione degli elenchi e nomenclatura (cartelle, ruoli, issue con label, baseline e documenti della relazione finale); esplicitati processo Scrum con percorso critico, organizzazione (Mintzberg e Reddin), approccio MDA, Software Quality e complessità di McCabe; allineati criteri di accettazione Maven e work package con lo sprint 5|
 
 ## 
 
@@ -26,10 +26,10 @@ Il sistema ha tre attori: Il Cliente, il Tecnico Riparatore e il Responsabile Ma
 
 **Funzionalità principali**
 
-* Accettazione del dispositivo, creazione della scheda di riparazione e generazione della ricevuta di ingresso.
-* Diagnosi del guasto, invio del preventivo e approvazione da parte del cliente.
-* Ordine del pezzo di ricambio quando non è presente in magazzino.
-* Consegna del dispositivo riparato e registrazione del pagamento.
+* **Accettazione:** Accettazione del dispositivo, creazione della scheda di riparazione e generazione della ricevuta di ingresso.
+* **Diagnosi e preventivo:** Diagnosi del guasto, invio del preventivo e approvazione da parte del cliente.
+* **Ricambi:** Ordine del pezzo di ricambio quando non è presente in magazzino.
+* **Consegna e pagamento:** Consegna del dispositivo riparato e registrazione del pagamento.
 
 **Flussi di eccezione**
 
@@ -100,7 +100,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 **Repository e cartelle**
 
-* **Proprietà del repository:** Creato dall'account `AleBenUni` e condiviso con i professori Gargantini (`garganti`) e Bonfanti (`silviabonfanti`). La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
+* **Proprietà del repository:** Creato dall'account `AleBenUni` e condiviso con i professori Gargantini e Bonfanti. La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
 * **Struttura delle cartelle:**
   * **`Documenti/`:** Contiene la documentazione ufficiale e il file di progetto StarUML.
   * **`Codice/`:** Contiene i progetti Eclipse.
@@ -216,10 +216,10 @@ Ogni membro deve dare un contributo significativo. A fine progetto ciascuno valu
 
 Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comune tra requisiti, design e codice.
 
-* **Requisiti:** Analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, definizione degli attributi di qualità del software (Software Quality), use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento `alt` del sequence diagram e almeno un test JUnit, con tracciabilità tra il Documento 3 (Requisiti) e il Documento 5 (Testing).
+* **Requisiti:** Elicitazione e analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, definizione degli attributi di qualità del software (Software Quality), use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento `alt` del sequence diagram e almeno un test JUnit, con tracciabilità tra il Documento 3 (Requisiti) e il Documento 5 (Testing).
 * **Modellazione:** Diagrammi UML realizzati con StarUML 5 (use case, class, state machine, sequence, communication o timing, activity, component e package diagram).
 * **Generazione del codice:** Prima versione delle classi Java generata una sola volta dal class diagram con StarUML secondo un approccio MDA (Model-Driven Architecture) parziale, a modello stabile (fine sprint 2), per non sovrascrivere codice scritto a mano; poi completata a mano, compresi tutti i corpi dei metodi. La generazione ha un commit dedicato e il Documento 4 (Design) riporta l'elenco delle classi generate, con package e modifiche manuali successive.
-* **Design:** Almeno due design pattern visti a lezione; candidati: State per la scheda di riparazione, Observer per le notifiche al cliente, Strategy per il calcolo dei costi.
+* **Design:** Almeno due design pattern visti a lezione (tra cui i candidati State per la scheda di riparazione, Observer per le notifiche al cliente e Strategy per il calcolo dei costi).
 * **Implementazione:** Java moderno, Maven, Log4j, database embedded, interfaccia solo a riga di comando (console).
 * <mark>**Test:** JUnit per i test di unità, con misura di copertura; un test per ogni flusso alternativo degli use case, con l'elenco di test, scenario ed esito atteso nel Documento 5 (Testing).</mark>
 * <mark>**Qualità del codice:** Calcolo della complessità ciclomatica (McCabe) e metriche con gli strumenti visti a lezione (JDepend, Structure101, SonarLint, PMD).</mark>
@@ -252,7 +252,7 @@ Il lavoro è diviso in sette work package, ciascuno con ore, sprint e responsabi
 
 * **WP1 – Gestione e setup** (14 ore, sprint 0 e riepiloghi in ogni sprint; Project Manager): Configurazione del repository, board, Project Plan, registro ore. **Deliverable:** Project Plan e repository configurato.
 * **WP2 – Requisiti** (22 ore, sprint 0 e 1; Analista dei requisiti): Elicitazione, specifica secondo IEEE 830, definizione degli attributi di Software Quality, use case con scenari ed eccezioni. **Deliverable:** Documento 3 (Requisiti) e use case diagram.
-* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto): Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. **Deliverable:** Progetto StarUML con i diagrammi e prime classi Java generate.
+* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto): Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. **Deliverable:** Progetto StarUML con i diagrammi (distribuiti tra il Documento 3 (Requisiti) e il Documento 4 (Design)) e prime classi Java generate.
 * **WP4 – Architettura e design** (30 ore, sprint 2 e 3; Architetto): Viste architetturali, component e package diagram, stile architetturale, design pattern, libreria esterna Maven. **Deliverable:** Documento 4 (Design).
 * **WP5 – Implementazione** (24 ore, sprint 3 e 4; Responsabile sviluppo e test): Progetti Eclipse Maven, completamento del codice generato, database embedded, logging, interfaccia a riga di comando. **Deliverable:** Codice funzionante dei flussi principali.
 * **WP6 – Testing** (10 ore, sprint 4; Responsabile sviluppo e test): Test JUnit, misura di copertura, metriche sul codice. **Deliverable:** Suite di test e Documento 5 (Testing).
@@ -291,9 +291,9 @@ Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da 
 
 **Richieste di modifica**
 
-1. Chi propone apre un'issue con motivo, impatto su requisiti, modelli, codice e ore.
-2. Il Project Manager, sentito il team, valuta la richiesta.
-3. La modifica approvata viene implementata tramite un branch e rivista con pull request.
+1. **Proposta:** Chi propone apre un'issue con motivo, impatto su requisiti, modelli, codice e ore.
+2. **Valutazione:** Il Project Manager, sentito il team, valuta la richiesta.
+3. **Approvazione e tracciamento:** La modifica approvata viene implementata tramite un branch e rivista con pull request.
 
 **Versioning dei documenti**
 
@@ -307,16 +307,16 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 
 **Cosa consegniamo**
 
-* Project Plan, approvato dal professore almeno un mese prima dell'esame.
+* **Project Plan:** Approvato dal professore almeno un mese prima dell'esame.
 * **Relazione finale in un unico PDF diviso in capitoli:** Documento 1 (Project Plan), Documento 2 (Gestione del progetto), Documento 3 (Requisiti), Documento 4 (Design), Documento 5 (Testing), Documento 6 (Maintenance).
-* Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli.
-* File StarUML con tutti i diagrammi.
+* **Codice e test:** Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli.
+* **Modelli UML:** File StarUML con tutti i diagrammi.
 
 **Come**
 
-* Tutto committato nel repository condiviso con Gargantini e Bonfanti.
-* **Prima della consegna, prova su un clone pulito:** <mark>Build Maven e test devono passare da zero. </mark>
-* Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
+* **Consegna su GitHub:** Tutto committato nel repository condiviso con i professori Gargantini e Bonfanti.
+* **Prima della consegna, prova su un clone pulito:** <mark>Build Maven e test devono passare da zero.</mark>
+* **Correzioni post-consegna:** Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
 
 **Presentazione**
 

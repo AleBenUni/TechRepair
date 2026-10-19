@@ -100,7 +100,7 @@ Tutte le decisioni operative e architetturali vengono prese per consenso all'int
 **Interfacce esterne**
 
 * Docenti di riferimento: Il Prof. Gargantini e la Prof.ssa Bonfanti dispongono dell'accesso completo al repository GitHub del progetto. Le richieste di approvazione formale e i feedback vengono gestiti tramite GitHub
-* #### Project Plan: Il project plan deve essere formalmente approvato dal professore almeno un mese prima della data d'esame prevista
+* Project Plan: Il project plan deve essere formalmente approvato dal professore almeno un mese prima della data d'esame prevista
 
 
 
@@ -137,12 +137,12 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 * Branch 'main' stabile: Il ramo main rappresenta il codice di produzione stabile. Nessuna modifica viene effettuata direttamente su di esso
 * Apertura dei Branch: Ogni attività parte da un Issue. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita
 * Commit piccoli e frequenti: Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici
-* Una pull request per ogni branch: Ogni branch richiede l'apertura di una Pull Request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
-* Gestione file StarUML (.mdj): Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta
+* Una pull request per ogni branch: Ogni branch richiede l'apertura di una Pull Request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo
+* #### Gestione file StarUML (.mdj): Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta
 
-  * Chi inizia a lavorarci deve "prenotarlo" con un commento nell'issue dedicato.
-  * Nessun altro può modificare il modello finché l'issue associato non passa nello stato di In Review.
-  * È obbligatorio eseguire un git pull immediatamente prima di aprire StarUML.
+  * #### Chi inizia a lavorarci deve "prenotarlo" con un commento nell'issue dedicato
+  * #### Nessun altro può modificare il modello finché l'issue associato non passa nello stato di In Review
+  * #### È obbligatorio eseguire un git pull immediatamente prima di aprire StarUML
 
 
 
@@ -151,11 +151,6 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 * Nessun push diretto su 'main': Ogni modifica passa da una pull request
 * Approvazione mirata: Per poter effettuare il merge, serve l'approvazione del Project Manager. In caso di sua indisponibilità, l'approvazione può essere concessa da un membro del team diverso dall'autore, scelto in base alla competenza specifica del task
 * Strategia di Merge: Il merge viene eseguito solo dopo aver ottenuto l'approvazione. Si utilizza il merge normale (Create a merge commit) e non lo squash, per mantenere intatta la cronologia dei singoli commit nella storia del progetto
-* Template della Pull Request: Ogni PR deve soddisfare la checklist interna prima di essere sottomessa:
-
-  * Build e test Maven superati con successo
-  * Assenza di percorsi assoluti nel codice
-  * Documenti e diagrammi StarUML aggiornati ed esportati correttamente
 * Statistiche finali: A fine progetto, il documento di gestione riporterà i dati analitici su commit, PR aperte e review effettuate per ciascun componente del team
 
 
@@ -269,8 +264,8 @@ Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comu
 * **Generazione del codice.** Prima versione delle classi Java generata una sola volta dal class diagram con StarUML, a modello stabile (fine sprint 2), per non sovrascrivere codice scritto a mano; poi completata a mano, compresi tutti i corpi dei metodi. La generazione ha un commit dedicato e il Documento 4 (design) riporta l'elenco delle classi generate, con package e modifiche manuali successive
 * **Design.** Almeno due design pattern visti a lezione; candidati: State per la scheda di riparazione, Observer per le notifiche al cliente, Strategy per il calcolo dei costi
 * **Implementazione.** Java moderno, Maven, log4j, database embedded, interfaccia solo a riga di comando (console)
-* **Test.** JUnit per i test di unità, con misura di copertura; un test per ogni flusso alternativo degli use case, con l'elenco di test, scenario ed esito atteso nel documento di testing
-* **Qualità del codice.** Metriche con gli strumenti visti a lezione (JDepend, Structure101, SonarLint, PMD)
+* #### **Test.** JUnit per i test di unità, con misura di copertura; un test per ogni flusso alternativo degli use case, con l'elenco di test, scenario ed esito atteso nel documento di testing
+* #### **Qualità del codice.** Metriche con gli strumenti visti a lezione (JDepend, Structure101, SonarLint, PMD)
 * **Refactoring.** Attività svolte e documentate durante lo sprint 4, con eventuali correzioni nello sprint 5
 * **Configuration management.** GitHub con issue, branch, pull request e code review
 

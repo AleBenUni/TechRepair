@@ -308,7 +308,7 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 **Come:**
 
 * Tutto committato nel repository condiviso con Gargantini e Bonfanti.
-* **Prima della consegna, prova su un clone pulito:** Build Maven e test devono passare da zero ................
+* **Prima della consegna, prova su un clone pulito:** <mark>Build Maven e test devono passare da zero. </mark>
 * Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
 
 **Presentazione:** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.

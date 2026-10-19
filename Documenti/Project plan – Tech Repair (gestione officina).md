@@ -12,7 +12,7 @@ Tech Repair è il sistema che il nostro team di quattro persone sviluppa per il 
 
 ## 
 
-## 1. Introduction
+## 1\. Introduction
 
 Tech Repair gestisce il percorso di un dispositivo in riparazione, dall'accettazione in officina alla consegna e al pagamento.
 
@@ -41,7 +41,7 @@ Rientra tutto il flusso sopra, con dati persistiti in un database embedded e int
 
 ## 
 
-## 2. Process model
+## 2\. Process model
 
 Seguiamo un processo iterativo e incrementale a sprint di due settimane (lo sprint 0 dura una settimana), in cui requisiti e modelli vengono raffinati a ogni iterazione; il progetto è quasi completo il 13 dicembre 2026.
 
@@ -68,7 +68,7 @@ Le differenze tra questo piano e il processo realmente seguito saranno riportate
 
 ## 
 
-## 3. Organization of the project
+## 3\. Organization of the project
 
 Il team è composto da quattro persone, ciascuna con un'area di responsabilità specifica, operando in una struttura collaborativa senza una gerarchia rigida.
 
@@ -89,7 +89,7 @@ Tutte le decisioni operative e architetturali vengono prese per consenso all'int
 
 ## 
 
-## 4. Standards, guidelines, procedures
+## 4\. Standards, guidelines, procedures
 
 Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, modelli e documenti, per rendere chiaro chi ha fatto cosa.
 
@@ -97,9 +97,10 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 * **Proprietà del repository:** Creato dall'account AleBenUni e condiviso con i professori Gargantini e Bonfanti. La root del repository prende il nome del software (`TechRepair`) e non deve contenere file di configurazione dell'IDE (es. `.project`).
 * **Struttura delle cartelle:**
+
   * **`Documenti/`:** Contiene la documentazione ufficiale e il file di progetto StarUML.
   * **`Codice/`:** Contiene i progetti Eclipse.
-* **Nomenclatura progetti Eclipse:** Devono tassativamente iniziare con la sigla `TR_` (es. `TR_core`, `TR_console`, `TR_database`). Sono vietati nomi generici.
+* **Nomenclatura progetti Eclipse:** Devono tassativamente iniziare con la sigla `TR\_` (es. `TR\_core`, `TR\_console`, `TR\_database`). Sono vietati nomi generici.
 * **Gestione `.gitignore`:** Il file `.gitignore` deve escludere i file `.class` e la cartella `target/`. I file `.project`, `.classpath` e `pom.xml` devono essere sempre committati per garantire l'allineamento dell'ambiente di sviluppo.
 
 **Procedura Git e Kanban**
@@ -109,6 +110,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 * **Commit piccoli e frequenti:** Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici.
 * **Una pull request per ogni branch:** Ogni branch richiede l'apertura di una pull request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
 * #### **Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.
+
   * #### Chi inizia a lavorarci deve "prenotarlo" con un commento nell'issue dedicata.
   * #### Nessun altro può modificare il modello finché l'issue associata non passa nello stato "In Review".
   * #### È obbligatorio eseguire un `git pull` immediatamente prima di aprire StarUML.
@@ -134,7 +136,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
 ## 
 
-## 5. Management activities
+## 5\. Management activities
 
 La strategia di gestione pone come priorità assoluta un'analisi e una progettazione solide, seguite da un'implementazione funzionante dei flussi principali del sistema. Il progetto deve essere in stato di quasi completamento entro il 13 dicembre 2026, con consegna definitiva fissata entro l'8 gennaio 2027.
 
@@ -154,7 +156,9 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 **Monitoraggio e reporting (GitHub Projects)**
 
 * **Bacheca Kanban:**
+
   * **ToDo board:** Vista operativa principale organizzata che mappa visivamente i task dall'ideazione fino alla chiusura.
+
     * **Backlog:** Raccolta iniziale di tutte le issue e delle idee.
     * **Ready:** Task rifiniti e pronti per essere presi in carico dal team.
     * **In Progress:** Attività attualmente in fase di sviluppo.
@@ -164,6 +168,7 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
   * **My items:** Vista personalizzata filtrata esclusivamente sulle issue assegnate al singolo utente, raggruppate in base alla milestone di riferimento.
   * **Roadmap:** Visualizzazione cronologica che ordina e traccia nel tempo la pianificazione di tutte le issue lungo una linea temporale.
 * **Registro ore:** Registro contenente le ore di lavoro suddiviso in milestone e assegnatari.
+
   * **Ore stimate:** Ore stimate per il completamento dell'issue.
   * **Ore effettive:** Ore impiegate per il completamento dell'issue.
 
@@ -173,7 +178,7 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 
 ## 
 
-## 6. Potential risks
+## 6\. Potential risks
 
 I rischi più pesanti sono la sottostima del tempo di modellazione e la distribuzione non uniforme del carico; il registro viene rivisto a ogni fine sprint.
 
@@ -190,7 +195,7 @@ I rischi più pesanti sono la sottostima del tempo di modellazione e la distribu
 
 ## 
 
-## 7. Staffing
+## 7\. Staffing
 
 Quattro persone con ruoli di responsabilità distinti, ma tutte coinvolte in modellazione, codice e test, per circa 36 ore ciascuna (4 ore a settimana per 9 settimane).
 
@@ -207,7 +212,7 @@ Ogni membro deve dare un contributo significativo. A fine progetto ciascuno valu
 
 ## 
 
-## 8. Methods and techniques
+## 8\. Methods and techniques
 
 Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comune tra requisiti, design e codice.
 
@@ -223,25 +228,28 @@ Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comu
 
 ## 
 
-## 9. Quality assurance
+## 9\. Quality assurance
 
 La qualità si controlla con revisioni sistematiche, test automatici e metriche, verificati a ogni fine sprint.
 
 * **Revisioni:**
+
   * Ogni pull request è rivista da almeno un altro membro prima del merge.
   * Ogni diagramma UML è controllato con una checklist degli elementi visti a lezione.
   * Coerenza tra modelli, codice e documenti verificata a fine sprint.
 * **Test:**
+
   * Test JUnit per le classi e per i flussi principali.
 * ##### **Metriche:** Nessun ciclo tra package, complessità ciclomatica (McCabe) sotto controllo e avvisi di SonarLint e PMD esaminati e risolti o motivati.
 * ##### **Criteri di accettazione di uno sprint:**
+
   * ##### La build Maven passa da zero su un clone pulito del repository (a partire dallo sprint 3, con l'introduzione dei progetti Maven).
   * ##### Le issue dello sprint sono chiuse o riassegnate con motivazione.
   * ##### I documenti dello sprint sono aggiornati e committati.
 
 ## 
 
-## 10. Work packages
+## 10\. Work packages
 
 Il lavoro è diviso in sette work package, ciascuno con ore, sprint e responsabile; la somma delle ore coincide con il budget di 144 ore.
 
@@ -257,7 +265,7 @@ Ogni work package parte dai deliverable del precedente (requisiti, modelli, desi
 
 ## 
 
-## 11. Resources
+## 11\. Resources
 
 Le risorse sono quattro persone per circa 36 ore ciascuna e strumenti tutti gratuiti, quindi il budget si misura solo in ore.
 
@@ -270,7 +278,7 @@ Le risorse sono quattro persone per circa 36 ore ciascuna e strumenti tutti grat
 
 ## 
 
-## 12. Budget and schedule
+## 12\. Budget and schedule
 
 Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 ottobre al 13 dicembre) e almeno il 70% va a gestione, requisiti, modellazione e design.
 
@@ -280,7 +288,7 @@ Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 o
 
 ## 
 
-## 13. Changes
+## 13\. Changes
 
 Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da una pull request, così resta tracciata.
 
@@ -294,7 +302,7 @@ Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da 
 
 ## 
 
-## 14. Delivery
+## 14\. Delivery
 
 Consegniamo un repository GitHub completo e funzionante, con tutta la documentazione, almeno cinque giorni prima della presentazione.
 
@@ -312,3 +320,4 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 * Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
 
 **Presentazione:** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.
+

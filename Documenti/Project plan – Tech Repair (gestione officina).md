@@ -259,101 +259,89 @@ Ogni membro deve dare un contributo significativo. A fine progetto ciascuno valu
 
 Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comune tra requisiti, design e codice.
 
-* **Requisiti.** Analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento alt del sequence diagram e almeno un test JUnit, con tracciabilità tra i documenti Requisiti e Testing
-* **Modellazione.** UML con StarUML 5: use case, class, state machine, sequence, communication o timing, activity, component e package diagram
-* **Generazione del codice.** Prima versione delle classi Java generata una sola volta dal class diagram con StarUML, a modello stabile (fine sprint 2), per non sovrascrivere codice scritto a mano; poi completata a mano, compresi tutti i corpi dei metodi. La generazione ha un commit dedicato e il Documento 4 (design) riporta l'elenco delle classi generate, con package e modifiche manuali successive
-* **Design.** Almeno due design pattern visti a lezione; candidati: State per la scheda di riparazione, Observer per le notifiche al cliente, Strategy per il calcolo dei costi
-* **Implementazione.** Java moderno, Maven, log4j, database embedded, interfaccia solo a riga di comando (console)
+* **Requisiti:** Analisi del dominio dell'officina attraverso scenari d'uso dei tre attori, specifica secondo IEEE 830, use case con scenario principale ed eccezioni; ogni flusso di eccezione (per esempio preventivo rifiutato, pezzo fuori produzione) diventa un flusso alternativo di uno use case, una transizione della state machine, un frammento alt del sequence diagram e almeno un test JUnit, con tracciabilità tra i documenti Requisiti e Testing
+* **Modellazione:** UML con StarUML 5: use case, class, state machine, sequence, communication o timing, activity, component e package diagram
+* **Generazione del codice:** Prima versione delle classi Java generata una sola volta dal class diagram con StarUML, a modello stabile (fine sprint 2), per non sovrascrivere codice scritto a mano; poi completata a mano, compresi tutti i corpi dei metodi. La generazione ha un commit dedicato e il Documento 4 (design) riporta l'elenco delle classi generate, con package e modifiche manuali successive
+* **Design:** Almeno due design pattern visti a lezione; candidati: State per la scheda di riparazione, Observer per le notifiche al cliente, Strategy per il calcolo dei costi
+* **Implementazione:** Java moderno, Maven, log4j, database embedded, interfaccia solo a riga di comando (console)
 * #### **Test.** JUnit per i test di unità, con misura di copertura; un test per ogni flusso alternativo degli use case, con l'elenco di test, scenario ed esito atteso nel documento di testing
 * #### **Qualità del codice.** Metriche con gli strumenti visti a lezione (JDepend, Structure101, SonarLint, PMD)
-* **Refactoring.** Attività svolte e documentate durante lo sprint 4, con eventuali correzioni nello sprint 5
-* **Configuration management.** GitHub con issue, branch, pull request e code review
+* **Refactoring:** Attività svolte e documentate durante lo sprint 4, con eventuali correzioni nello sprint 5
+* **Configuration management:** GitHub con issue, branch, pull request e code review
 
 ## 
 
 ## 9\. Quality assurance
 
-La qualità si controlla con revisioni sistematiche, test automatici e metriche, verificati a ogni fine sprint.
+La qualità si controlla con revisioni sistematiche, test automatici e metriche, verificati a ogni fine sprint
 
-**Revisioni.**
+* **Revisioni:**
 
-* Ogni pull request è rivista da almeno un altro membro prima del merge
-* Ogni diagramma UML è controllato con una checklist degli elementi visti a lezione
-* Coerenza tra modelli, codice e documenti verificata a fine sprint
+  * Ogni pull request è rivista da almeno un altro membro prima del merge
+  * Ogni diagramma UML è controllato con una checklist degli elementi visti a lezione
+  * Coerenza tra modelli, codice e documenti verificata a fine sprint
+* **Test:**
 
-**Test.**
+  * Test JUnit per le classi e per i flussi principali
+* ##### **Metriche:** Nessun ciclo tra package, complessità sotto controllo e avvisi di SonarLint e PMD esaminati e risolti o motivati.
+* ##### **Criteri di accettazione di uno sprint:**
 
-* Test JUnit per le classi di dominio e per i flussi principali, inclusi i casi di eccezione (preventivo rifiutato, pezzo fuori produzione)
-* Obiettivo di copertura delle linee: almeno il 70% sulle classi di dominio, misurata con uno strumento di copertura
-
-**Metriche.** Nessun ciclo tra package, complessità sotto controllo e avvisi di SonarLint e PMD esaminati e risolti o motivati.
-
-**Criteri di accettazione di uno sprint.**
-
-* La build Maven passa da zero su un clone pulito del repository
-* Tutti i test sono verdi
-* Le issue dello sprint sono chiuse o riassegnate con motivazione
-* I documenti dello sprint sono aggiornati e committati
+  * ##### La build Maven passa da zero su un clone pulito del repository
+  * ##### Le issue dello sprint sono chiuse o riassegnate con motivazione
+  * ##### I documenti dello sprint sono aggiornati e committati
 
 ## 
 
 ## 10\. Work packages
 
-Il lavoro è diviso in sette work package, ciascuno con ore, sprint e responsabile; la somma delle ore coincide con il budget di 144 ore.
+Il lavoro è diviso in sette work package, ciascuno con ore, sprint e responsabile; la somma delle ore coincide con il budget di 144 ore
 
-* **WP1 – Gestione e setup** (14 ore, sprint 0 e riepiloghi in ogni sprint; Project manager). Configurazione del repository, board, project plan, registro ore. Deliverable: project plan 1.0.0 e repository configurato.
-* **WP2 – Requisiti** (22 ore, sprint 0 e 1; Analista dei requisiti). Elicitazione, specifica secondo IEEE 830, use case con scenari ed eccezioni. Deliverable: documento dei requisiti e use case diagram.
-* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto). Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. Deliverable: progetto StarUML con i diagrammi e prime classi Java generate.
-* **WP4 – Architettura e design** (30 ore, sprint 2 e 3; Architetto). Viste architetturali, component e package diagram, stile architetturale, design pattern, libreria esterna Maven. Deliverable: documento di architettura e design.
-* **WP5 – Implementazione** (24 ore, sprint 3 e 4; Responsabile sviluppo e test). Progetti Eclipse Maven, completamento del codice generato, database embedded, logging, interfaccia a riga di comando. Deliverable: codice funzionante dei flussi principali.
-* **WP6 – Testing** (10 ore, sprint 4; Responsabile sviluppo e test). Test JUnit, misura di copertura, metriche sul codice. Deliverable: suite di test e documento di testing.
-* **WP7 – Rifinitura e presentazione** (9 ore, sprint 4; Project manager). Refactoring documentato, documenti finali, README, prova su clone pulito, presentazione. Deliverable: repository pronto per la consegna e slide.
+* **WP1 – Gestione e setup** (14 ore, sprint 0 e riepiloghi in ogni sprint; Project manager). Configurazione del repository, board, project plan, registro ore. Deliverable: project plan 1.0.0 e repository configurato
+* **WP2 – Requisiti** (22 ore, sprint 0 e 1; Analista dei requisiti). Elicitazione, specifica secondo IEEE 830, use case con scenari ed eccezioni. Deliverable: documento dei requisiti e use case diagram
+* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto). Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML Deliverable: progetto StarUML con i diagrammi e prime classi Java generate
+* **WP4 – Architettura e design** (30 ore, sprint 2 e 3; Architetto). Viste architetturali, component e package diagram, stile architetturale, design pattern, libreria esterna Maven Deliverable: documento di architettura e design
+* **WP5 – Implementazione** (24 ore, sprint 3 e 4; Responsabile sviluppo e test). Progetti Eclipse Maven, completamento del codice generato, database embedded, logging, interfaccia a riga di comando. Deliverable: codice funzionante dei flussi principali
+* **WP6 – Testing** (10 ore, sprint 4; Responsabile sviluppo e test). Test JUnit, misura di copertura, metriche sul codice. Deliverable: suite di test e documento di testing
+* **WP7 – Rifinitura e presentazione** (9 ore, sprint 4; Project manager). Refactoring documentato, documenti finali, README, prova su clone pulito, presentazione. Deliverable: repository pronto per la consegna e slide
 
-Ogni work package parte dai deliverable del precedente (requisiti, modelli, design, codice, test); gestione e rifinitura accompagnano l'intero progetto.
+Ogni work package parte dai deliverable del precedente (requisiti, modelli, design, codice, test); gestione e rifinitura accompagnano l'intero progetto
 
 ## 
 
 ## 11\. Resources
 
-Le risorse sono quattro persone per circa 36 ore ciascuna e strumenti tutti gratuiti, quindi il budget si misura solo in ore.
+Le risorse sono quattro persone per circa 36 ore ciascuna e strumenti tutti gratuiti, quindi il budget si misura solo in ore
 
-* **Persone.** Quattro membri, 144 ore in totale (sezione 12)
-* **Sviluppo.** JDK, Eclipse, Maven, JUnit, log4j come dipendenza Maven, database embedded (il prodotto, per esempio H2 o SQLite, lo sceglie il team con un'issue entro lo sprint 2), interfaccia solo a riga di comando
-* **Modellazione.** StarUML 5, versione gratuita
-* **Collaborazione.** GitHub per repository, issue, project board, pull request e code review
-* **Analisi del codice.** Strumenti di metriche e copertura (JDepend, Structure101, SonarLint, PMD, uno strumento di copertura)
-* **Hardware.** I computer personali dei membri e un PC dedicato per la demo all'esame orale
+* **Persone:** Quattro membri, 144 ore in totale (sezione 12)
+* **Sviluppo:** JDK, Eclipse, Maven, JUnit, log4j come dipendenza Maven, database embedded, interfaccia solo a riga di comando
+* **Modellazione:** StarUML 5, versione gratuita
+* **Collaborazione:** GitHub per repository, issue, project board, pull request e code review
+* **Analisi del codice:** Strumenti di metriche e copertura
+* **Hardware:** I computer personali dei membri e un PC dedicato per la demo all'esame orale
 
 ## 
 
 ## 12\. Budget and schedule
 
-Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 ottobre al 13 dicembre) e almeno il 70% va a gestione, requisiti, modellazione e design.
+Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 ottobre al 13 dicembre) e almeno il 70% va a gestione, requisiti, modellazione e design
 
-\[embedded content: stima del team · 144 ore in 7 fasi]
-
-Le ore sono una stima iniziale: le aggiorniamo a fine sprint con il registro ore. La forchetta di 30-40 ore del corso equivale a 3,3-4,4 ore a settimana: restiamo al centro e teniamo fino a 4 ore a testa di margine per lo sprint 5.
-
-Il calendario proposto copre sei sprint: i primi cinque (dal 12 ottobre al 13 dicembre 2026) portano il progetto quasi a compimento; lo sprint 5 (14 dicembre-8 gennaio) copre le vacanze natalizie ed è un margine per correzioni, revisione e consegna.
-
-\[embedded content: calendario proposto · 6 sprint e 3 milestone]
-
-La consegna interna è fissata all'Jan 8, 2027. Il progetto completo va consegnato almeno cinque giorni prima della presentazione, quindi la presentazione non può cadere prima del 13 gennaio 2027; se la data dell'appello è anticipata, rivediamo il calendario.
+* Le ore sono una stima iniziale: Le aggiorniamo a fine sprint con il registro ore. La forchetta di 30-40 ore del corso equivale a 3/4 ore a settimana
+* Il calendario proposto copre sei sprint: I primi cinque (dal 12 ottobre al 13 dicembre 2026) portano il progetto quasi a compimento; lo sprint 5 (14 dicembre/8 gennaio) copre le vacanze natalizie ed è un margine per correzioni, revisione e consegna
+* La consegna interna è fissata all'8 gennaio 2027. Il progetto completo va consegnato almeno cinque giorni prima della presentazione, quindi la presentazione non può cadere prima del 13 gennaio 2027
 
 ## 
 
 ## 13\. Changes
 
-Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da una pull request, così resta tracciata.
+Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da una pull request, così resta tracciata
 
-**Richieste di modifica.**
+**Richieste di modifica:**
 
 1. Chi propone apre un'issue con motivo, impatto su requisiti, modelli, codice e ore
-2. Il team valuta la richiesta nella riunione settimanale; se cambia il perimetro, la decide il project manager sentito il team
-3. Se la modifica tocca il project plan, si chiede l'approvazione del professore tramite issue a lui assegnata
-4. La modifica approvata viene implementata su un branch e rivista con pull request
+2. Il project manager, sentito il team, valuta la richiesta 
+3. La modifica approvata viene implementata tramite un branch e rivista con pull request
 
-**Versioning dei documenti.** Il project plan ha una tabella delle versioni in testa: ogni revisione aggiunge una riga con data e modifiche. I documenti nel repository sono versionati con git, quindi la cronologia dei commit fa da storico.
+**Versioning dei documenti:** Il project plan ha una tabella delle versioni in testa: Ogni revisione aggiunge una riga con data e modifiche. I documenti nel repository sono versionati con git, quindi la cronologia dei commit fa da storico.
 
 ## 
 
@@ -361,18 +349,18 @@ Ogni modifica a requisiti, piano o documenti nasce come issue GitHub e passa da 
 
 Consegniamo un repository GitHub completo e funzionante, con tutta la documentazione, almeno cinque giorni prima della presentazione.
 
-**Cosa consegniamo.**
+**Cosa consegniamo:**
 
 * Project plan, approvato dal professore almeno un mese prima dell'esame
 * Relazione finale in un unico PDF diviso in capitoli: project plan, gestione del progetto, requisiti, design, testing, maintenance
 * Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli
 * File StarUML con tutti i diagrammi
 
-**Come.**
+**Come:**
 
-* Tutto committato nel repository condiviso con garganti e silviabonfanti
+* Tutto committato nel repository condiviso con Gargantini e Bonfanti
 * Prima della consegna, prova su un clone pulito: build Maven e test devono passare da zero ................
 * Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java
 
-**Presentazione.** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.
+**Presentazione:** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.
 

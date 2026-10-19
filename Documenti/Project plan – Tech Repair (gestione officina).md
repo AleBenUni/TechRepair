@@ -110,7 +110,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 * **Una pull request per ogni branch:** Ogni branch richiede l'apertura di una pull request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
 * #### **Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.
   * #### Chi inizia a lavorarci deve "prenotarlo" con un commento nell'issue dedicata.
-  * #### Nessun altro può modificare il modello finché l'issue associata non passa nello stato di In Review.
+  * #### Nessun altro può modificare il modello finché l'issue associata non passa nello stato "In Review".
   * #### È obbligatorio eseguire un `git pull` immediatamente prima di aprire StarUML.
 
 **Pull request e review**
@@ -196,7 +196,7 @@ Quattro persone con ruoli di responsabilità distinti, ma tutte coinvolte in mod
 
 |Ruolo|Responsabilità principali|Membro|
 |-|-|-|
-|Project Manager e configuration manager|Pianificazione, board, issue, release, ordine del repository, registro ore|Matteo Testa|
+|Project Manager e Configuration Manager|Pianificazione, board, issue, release, ordine del repository, registro ore|Matteo Testa|
 |Analista dei requisiti|Specifica dei requisiti, use case, scenari ed eccezioni|Alice Rota|
 |Architetto|Architettura, modellazione UML (class, state machine, sequence, communication o timing, activity, component e package diagram), design pattern|Mattia Maggioni|
 |Responsabile sviluppo e test|Implementazione, test JUnit, copertura, metriche|Alessandro Benigni|
@@ -301,14 +301,14 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 **Cosa consegniamo:**
 
 * Project Plan, approvato dal professore almeno un mese prima dell'esame.
-* Relazione finale in un unico PDF diviso in capitoli: Documento 1 (Project Plan), Documento 2 (Gestione del progetto), Documento 3 (Requisiti), Documento 4 (Design), Documento 5 (Testing), Documento 6 (Maintenance).
+* **Relazione finale in un unico PDF diviso in capitoli:** Documento 1 (Project Plan), Documento 2 (Gestione del progetto), Documento 3 (Requisiti), Documento 4 (Design), Documento 5 (Testing), Documento 6 (Maintenance).
 * Progetti Eclipse Maven con codice, test JUnit e istruzioni per eseguirli.
 * File StarUML con tutti i diagrammi.
 
 **Come:**
 
 * Tutto committato nel repository condiviso con Gargantini e Bonfanti.
-* Prima della consegna, prova su un clone pulito: Build Maven e test devono passare da zero ................
+* **Prima della consegna, prova su un clone pulito:** Build Maven e test devono passare da zero ................
 * Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
 
 **Presentazione:** Il tempo a disposizione per quattro persone è di 35 minuti, più circa 10 per le domande. Portiamo un PC con il progetto in esecuzione per demo ed esecuzione dei test.

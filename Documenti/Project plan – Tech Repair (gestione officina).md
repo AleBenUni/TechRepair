@@ -8,7 +8,7 @@ Tech Repair è il sistema che il nostro team di quattro persone sviluppa per il 
 |-|-|-|
 |1.0.0|12/10/2026|Versione iniziale|
 |1.0.1|13/10/2026|Aggiunti i work package; ore settimanali, sprint e date ricalcolati (progetto quasi pronto il 13 dicembre, consegna entro l'8 gennaio); interfaccia solo console; repository creato da `AleBenUni`; regole su pull request e review, board GitHub, codice generato e scenari di eccezione|
-|1.0.2|19/10/2026|Uniformati titoli, punteggiatura, formattazione degli elenchi e nomenclatura (cartelle, ruoli, issue con label, baseline e documenti della relazione finale); esplicitati processo Scrum con percorso critico, organizzazione (Mintzberg e Reddin), approccio MDA, Software Quality e complessità di McCabe; allineati criteri di accettazione Maven e work package con lo sprint 5|
+|1.0.2|19/10/2026|Uniformati titoli, punteggiatura, formattazione degli elenchi e nomenclatura (cartelle, ruoli, issue con label, baseline e documenti della relazione finale); esplicitati processo Scrum con percorso critico, organizzazione, approccio MDA, Software Quality e complessità di McCabe; allineati criteri di accettazione Maven e work package con lo sprint 5|
 
 ## 
 
@@ -61,12 +61,12 @@ Il team è piccolo e ha poche ore a testa, quindi servono iterazioni brevi e ver
 
 **Obiettivi per sprint** (date e ore nella sezione 12)
 
-* **Sprint 0** (12-18 ottobre, 16 ore di team): Setup del repository, Project Plan, avvio dei requisiti.
-* **Sprint 1** (19 ottobre-1 novembre, 32 ore): Specifica dei requisiti, use case diagram, class diagram.
-* **Sprint 2** (2-15 novembre, 32 ore): State machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML secondo un approccio MDA (Model-Driven Architecture), prime viste architetturali.
-* **Sprint 3** (16-29 novembre, 32 ore): Architettura (component e package diagram), design pattern, implementazione del nucleo.
-* **Sprint 4** (30 novembre-13 dicembre, 32 ore): Implementazione completa, test JUnit, copertura e metriche, refactoring e documenti finali; il progetto è quasi pronto il 13 dicembre.
-* **Sprint 5** (14 dicembre-8 gennaio, nessuna ora aggiuntiva oltre al completamento del WP7): Margine per correzioni, revisione incrociata, prova su clone pulito e consegna entro l'8 gennaio.
+* **Sprint 0** (12 ottobre - 9 novembre, 16 ore di team): Setup del repository, Project Plan, avvio dei requisiti.
+* **Sprint 1** (10-23 novembre, 32 ore): Specifica dei requisiti, use case diagram, class diagram.
+* **Sprint 2** (24 novembre - 7 dicembre, 32 ore): State machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML secondo un approccio MDA (Model-Driven Architecture), prime viste architetturali.
+* **Sprint 3** (8-21 dicembre, 32 ore): Architettura (component e package diagram), design pattern, implementazione del nucleo.
+* **Sprint 4** (22 dicembre - 4 gennaio, 32 ore): Implementazione completa, test JUnit, copertura e metriche, refactoring e documenti finali; il progetto è quasi pronto il 13 dicembre.
+* **Sprint 5** (5-8 gennaio, nessuna ora aggiuntiva oltre al completamento del WP7): Margine per correzioni, revisione incrociata, prova su clone pulito e consegna entro l'8 gennaio.
 * **Percorso critico:** Specifica dei requisiti (sprint 0-1) → Class diagram stabile (sprint 1-2) → Generazione del codice da StarUML (fine sprint 2) → Implementazione del nucleo e test (sprint 3-4).
 
 Le differenze tra questo piano e il processo realmente seguito saranno riportate nel Documento 2 (Gestione del progetto).
@@ -105,7 +105,7 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 
   * **`Documenti/`:** Contiene la documentazione ufficiale e il file di progetto StarUML.
   * **`Codice/`:** Contiene i progetti Eclipse.
-* **Nomenclatura progetti Eclipse:** Devono tassativamente iniziare con la sigla `TR\_` (es. `TR\_core`, `TR\_console`, `TR\_database`). Sono vietati nomi generici.
+* **Nomenclatura progetti Eclipse:** Devono tassativamente iniziare con la sigla `TR\\\_` (es. `TR\\\_core`, `TR\\\_console`, `TR\\\_database`). Sono vietati nomi generici.
 * **Gestione `.gitignore`:** Il file `.gitignore` deve escludere i file `.class` e la cartella `target/`. I file `.project`, `.classpath` e `pom.xml` devono essere sempre committati per garantire l'allineamento dell'ambiente di sviluppo.
 
 **Procedura Git e Kanban**
@@ -114,11 +114,11 @@ Tutto il lavoro passa da GitHub e segue regole comuni su repository, codice, mod
 * **Apertura dei branch:** Ogni attività parte da un'issue classificata tramite label, milestone e assegnatario. Il branch associato deve essere creato direttamente dall'interfaccia web dell'issue su GitHub, accettando la nomenclatura automatica predefinita.
 * **Commit piccoli e frequenti:** Ogni commit deve avere un titolo esplicativo ed eventuale descrizione dettagliata. Sono vietati messaggi generici.
 * **Una pull request per ogni branch:** Ogni branch richiede l'apertura di una pull request (PR), che risulterà nativamente collegata all'issue di origine grazie alla creazione guidata del ramo.
-* <mark>**Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.</mark>
+* **Gestione file StarUML (`.mdj`):** Essendo un file unico e non integrabile via merge testuale, è tassativo lavorarci una sola persona alla volta.
 
-  * <mark>Chi inizia a lavorarci deve "prenotarlo" con un commento nell'issue dedicata.</mark>
-  * <mark>Nessun altro può modificare il modello finché l'issue associata non passa nello stato "In Review".</mark>
-  * <mark>È obbligatorio eseguire un `git pull` immediatamente prima di aprire StarUML.</mark>
+  * Chi inizia a lavorarci deve "prenotarlo" tramite il Project Manager che contrassegna la issue con una label "Critical Section".
+  * Nessun altro può modificare il modello finché l'issue associata non passa nello stato "In Review".
+  * È obbligatorio eseguire un `git pull` immediatamente prima di aprire StarUML.
 
 **Pull request e review**
 
@@ -154,7 +154,7 @@ La strategia di gestione pone come priorità assoluta un'analisi e una progettaz
 
 **Assunzioni**
 
-* **Impegno orario:** Ogni membro del team dedica circa 4 ore a settimana per 9 settimane (dal 12 ottobre al 13 dicembre 2026), per un totale stimato di 36 ore pro capite, rispettando la forchetta di 30-40 ore indicata dal corso.
+* **Impegno orario:** Ogni membro del team dedica circa 4 ore a settimana per 9 settimane (dal 12 ottobre, quasi completamente entro il 13 dicembre 2026), per un totale stimato di 36 ore pro capite, rispettando la forchetta di 30-40 ore indicata dal corso.
 * **Standardizzazione:** Tutti i componenti del team utilizzano i medesimi strumenti di sviluppo e la stessa struttura concordata per il repository.
 * **Fattori esterni (Dipendenze):** La pianificazione temporale è strettamente subordinata alla data di approvazione del Project Plan, alla calendarizzazione della presentazione orale e alle sessioni d'esame degli altri insegnamenti universitari.
 
@@ -190,10 +190,11 @@ I rischi più pesanti sono la sottostima del tempo di modellazione e la distribu
 |Rischio|Probabilità|Impatto|Mitigazione|Responsabile|
 |-|-|-|-|-|
 |Sottostima del tempo di modellazione|Alta|Alto|Buffer nello sprint 2, review dei diagrammi a metà sprint|Architetto|
+|Requisiti ambigui, incompleti o soggetti a fraintendimenti|Media|Alto|Review incrociata dei casi d'uso con il team prima di bloccare la specifica; definizione chiara di flussi principali ed eccezioni.|Analista dei Requisiti|
 |Diagrammi UML troppo semplici|Media|Alto|Checklist degli elementi visti a lezione per state machine, sequence e activity; review incrociata|Architetto|
 |Carico di lavoro non uniforme tra i membri|Media|Alto|Issue assegnate esplicitamente, registro ore, controllo settimanale|Project Manager|
 |Implementazione frammentaria|Media|Alto|Perimetro ridotto, priorità ai flussi principali, test sui flussi|Responsabile sviluppo e test|
-|Sovrapposizione con gli esami di altri corsi|Alta|Medio|Calendario condiviso, sprint più leggeri nelle settimane d'esame, margine dello sprint 5 (14 dicembre-8 gennaio)|Project Manager|
+|Sovrapposizione con gli esami di altri corsi|Alta|Medio|Calendario condiviso, sprint più leggeri nelle settimane d'esame, margine dello sprint 0 (21 ottobre - 1 novembre) e dello sprint 4 e 5 (22 dicembre - 8 gennaio)|Project Manager|
 |Uso scorretto di Git, conflitti di merge|Media|Medio|Branch per issue, pull request obbligatorie, breve formazione iniziale|Project Manager|
 |Cicli tra package nel codice|Media|Medio|Controllo con JDepend o Structure101 a fine sprint|Architetto|
 |File StarUML o `.project` non committati|Bassa|Alto|Commit regolari, prova di clone pulito prima della consegna|Project Manager|
@@ -227,7 +228,6 @@ Usiamo i metodi visti a lezione per ogni attività, con UML come linguaggio comu
 * **Design:** Almeno due design pattern visti a lezione (tra cui i candidati State per la scheda di riparazione, Observer per le notifiche al cliente e Strategy per il calcolo dei costi).
 * **Implementazione:** Java moderno, Maven, Log4j, database embedded, interfaccia solo a riga di comando (console).
 * <mark>**Test:** JUnit per i test di unità, con misura di copertura; un test per ogni flusso alternativo degli use case, con l'elenco di test, scenario ed esito atteso nel Documento 5 (Testing).</mark>
-* <mark>**Qualità del codice:** Calcolo della complessità ciclomatica (McCabe) e metriche con gli strumenti visti a lezione (JDepend, Structure101, SonarLint, PMD).</mark>
 * **Refactoring:** Attività svolte e documentate nel Documento 6 (Maintenance) durante lo sprint 4, con eventuali correzioni nello sprint 5.
 * **Configuration management:** GitHub con issue, branch, pull request e code review.
 
@@ -245,10 +245,8 @@ La qualità si controlla con revisioni sistematiche, test automatici e metriche,
 * **Test:**
 
   * Test JUnit per le classi e per i flussi principali.
-* <mark>**Metriche:** Nessun ciclo tra package, complessità ciclomatica (McCabe) sotto controllo e avvisi di SonarLint e PMD esaminati e risolti o motivati.</mark>
 * <mark>**Criteri di accettazione di uno sprint:**</mark>
 
-  * <mark>La build Maven passa da zero su un clone pulito del repository (a partire dallo sprint 3, con l'introduzione dei progetti Maven).</mark>
   * <mark>Le issue dello sprint sono chiuse o riassegnate con motivazione.</mark>
   * <mark>I documenti dello sprint sono aggiornati e committati.</mark>
 
@@ -259,8 +257,8 @@ La qualità si controlla con revisioni sistematiche, test automatici e metriche,
 Il lavoro è diviso in sette work package, ciascuno con ore, sprint e responsabile; la somma delle ore coincide con il budget di 144 ore.
 
 * **WP1 – Gestione e setup** (14 ore, sprint 0 e riepiloghi in ogni sprint; Project Manager): Configurazione del repository, board, Project Plan, registro ore. **Deliverable:** Project Plan e repository configurato.
-* **WP2 – Requisiti** (22 ore, sprint 0 e 1; Analista dei requisiti): Elicitazione, specifica secondo IEEE 830, definizione degli attributi di Software Quality, use case con scenari ed eccezioni. **Deliverable:** Documento 3 (Requisiti) e use case diagram.
-* **WP3 – Modellazione UML** (35 ore, sprint 1 e 2; Architetto): Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. **Deliverable:** Progetto StarUML con i diagrammi (distribuiti tra il Documento 3 (Requisiti) e il Documento 4 (Design)) e prime classi Java generate.
+* **WP2 – Requisiti** (22 ore, sprint 1; Project Manager e Analista dei requisiti): Software Life Cycle, Configuration Management, People Management and Team Organisation. Elicitazione, specifica secondo IEEE 830, definizione degli attributi di Software Quality, use case con scenari ed eccezioni. **Deliverable:** Documento 2(Gestione del progetto), Documento 3 (Requisiti) e use case diagram.
+* **WP3 – Modellazione UML** (35 ore, sprint 2; Architetto): Class diagram, state machine, sequence, communication o timing e activity diagram, prima generazione del codice da StarUML. **Deliverable:** Progetto StarUML con i diagrammi (distribuiti tra il Documento 3 (Requisiti) e il Documento 4 (Design)) e prime classi Java generate.
 * **WP4 – Architettura e design** (30 ore, sprint 2 e 3; Architetto): Viste architetturali, component e package diagram, stile architetturale, design pattern, libreria esterna Maven. **Deliverable:** Documento 4 (Design).
 * **WP5 – Implementazione** (24 ore, sprint 3 e 4; Responsabile sviluppo e test): Progetti Eclipse Maven, completamento del codice generato, database embedded, logging, interfaccia a riga di comando. **Deliverable:** Codice funzionante dei flussi principali.
 * **WP6 – Testing** (10 ore, sprint 4; Responsabile sviluppo e test): Test JUnit, misura di copertura, metriche sul codice. **Deliverable:** Suite di test e Documento 5 (Testing).
@@ -285,10 +283,10 @@ Le risorse sono quattro persone per circa 36 ore ciascuna e strumenti tutti grat
 
 ## 12\. Budget and schedule
 
-Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 ottobre al 13 dicembre) e almeno il 70% va a gestione, requisiti, modellazione e design.
+Il budget è di 144 ore (36 a testa: 4 ore a settimana per 9 settimane, dal 12 ottobre 2026 al 4 gennaio 2027) e almeno il 70% va a gestione, requisiti, modellazione e design.
 
 * **Le ore sono una stima iniziale:** Le aggiorniamo a fine sprint con il registro ore. La forchetta di 30-40 ore del corso equivale a 3-4 ore a settimana.
-* **Il calendario proposto copre sei sprint:** I primi cinque (dal 12 ottobre al 13 dicembre 2026) portano il progetto quasi a compimento; lo sprint 5 (14 dicembre-8 gennaio) copre le vacanze natalizie ed è un margine per correzioni, revisione e consegna.
+* **Il calendario proposto copre sei sprint:** I primi cinque (dal 12 ottobre 2026 al 4 gennaio 2027) portano il progetto quasi a compimento; lo sprint 5 (4-8 gennaio 2027) copre le vacanze natalizie ed è un margine per correzioni, revisione e consegna.
 * **La consegna interna è fissata all'8 gennaio 2027:** Il progetto completo va consegnato almeno cinque giorni prima della presentazione, quindi la presentazione non può cadere prima del 13 gennaio 2027.
 
 ## 
@@ -323,7 +321,6 @@ Consegniamo un repository GitHub completo e funzionante, con tutta la documentaz
 **Come**
 
 * **Consegna su GitHub:** Tutto committato nel repository condiviso con i professori Gargantini e Bonfanti.
-* **Prima della consegna, prova su un clone pulito:** <mark>Build Maven e test devono passare da zero.</mark>
 * **Correzioni post-consegna:** Dopo la consegna si possono correggere eventuali errori, senza creare nuovi documenti né nuovi progetti Java.
 
 **Presentazione**
